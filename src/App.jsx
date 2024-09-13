@@ -11,7 +11,7 @@ const SSLChecker = () => {
     setError(null);
 
     try {
-      const response = await fetch(`/api/v1/check/facebook.com`);
+      const response = await fetch(`/api/v1/check/${domain}`);
       if (!response.ok) {
         throw new Error('Error fetching SSL data');
       }
